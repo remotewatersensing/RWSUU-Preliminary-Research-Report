@@ -1,0 +1,86 @@
+\newpage
+\subsection{DIY Drone}
+In this section, the feasibility of creating a specialized drone for the project will be discussed. Ideal parts will be selected and discussed, and a price list will be made.
+
+\subsubsection{Benefits and Drawbacks}
+The benefit of creating a specialized drone for the project is that one is in full control of the software and embedded hardware. This allows one to prioritize some things like waterproofing and payload capacity and cheap out on others such as a camera. It also allows for specific design choices that aren't possible with drones out of the box. Once the drone has been designed, it can be mass produced for often cheaper than modifying commercial drones.
+
+The drawbacks primarily lie in the time it takes to develop the drone. Talking to experts in the field, developing and testing a specialized drone can take anywhere from a few weeks to a few years, depending on the needs and the existing parts that exist. By the time you might have fully developed your drone, alternatives might be out there that do something similar for a lower price.
+
+\subsubsection{Parts List}
+Custom drones are usually built from existing parts. The following parts will be selected and discussed:
+\begin{description}
+   \item[Frame] The frame of the drone that supports the parts
+   \item[Motors] The motors of the drone that rotate the propellers
+   \item[Propellers] The propellers that generate lift to the drone
+   \item[ESC] Electronic Speed Controller used for distributing power to a motors and control their speed
+   \item[Flight Controller] Controls the ESC and communicates with peripherals of the drone
+   \item[GPS] Gives the Flight Controller real-time information to where it is located
+   \item[Radio Receiver] Receives real time input from a remote controller and passes it to the Flight Controller
+   \item[Camera + Transmitter] Camera on the drone along with a transmitter
+   \item[Video Receiver + Monitor] Receives the video signal from the transmitter
+   \item[Remote Controller] Controller to manually control the drone
+\end{description}
+
+\paragraph{Frame}\mbox{€165} \\
+The frame should be large enough to attach sensors. Given this, it makes sense to go with a hexacopter frame kit like the Tarot FY690S \cite{fy690s}. To water proof the drone's electronics, one can cover them with silicone conformal coating. \cite{conformalcoating} Pool noodles \cite{air2slandinggear} can be used on the six axis to deliver the buoyancy needed to comfortable land the drone in water.
+
+\paragraph{Motors}\mbox{€250} \\
+SwellPro sells the waterproof motors they use in their SplashDrone drones. \cite{swellpromotor} These are internally specially coated so that they can be submerged in water. As the frame has six axes, the drone needs 6 of them.
+
+\paragraph{Propellers}\mbox{€96} \\
+As the motors have proprietary locking mechanisms, one also needs the propellers from Swellpro.\cite{swellpromotor} As the frame has six axes, the drone needs 6 of them.
+
+\paragraph{ESC}\mbox{€133} \\
+Since this is a hexacopter, it needs six 6S electronic speed controllers. Hobbywing's 30A-Pro 2-6S ESCs are a good mix between value and quality. \cite{hobbywingesc}
+
+\paragraph{Flight Controller}\mbox{€75} \\
+The BeagleBone Blue \cite{bblue} is an affordable and complete robotics controller built around the popular BeagleBone open hardware computer. It runs on Linux, and GPIO ports are available, allowing one to extend the flight controller with remote sensoring. It supports ArduPilot \cite{ardupilot}, an autopilot software suite out of the box, and allows to turn the drone into a fully autonomous vehicle, supporting preprogrammed waypoints.
+
+\paragraph{Radio Receiver}\mbox{€35} \\
+The FrSky X8R was chosen, because of it's proven compatibility with the BeagleBone Blue Flight Controller \cite{ardupilotblue}
+
+\paragraph{GPS}\mbox{€20} \\
+The u-blox M8N was chosen, because of it's proven compatibility with the Beaglebone Blue Flight Controller \cite{ardupilotblue}
+
+\paragraph{Battery}\mbox{€37} \\
+To reach a flight time of at least 15 minutes, a 4400mAh 11.1v LiPo battery was chosen. \cite{jmtbattery} 4400mAh seems to be generally the standard for hexacopters due to their weight.
+
+\paragraph{Camera + Transmitter}\mbox{€125} \\
+The Caddx Nebula Nano V2 Digital FPV Camera Kit \cite{vidtransmit} is an advanced video transmission module that supports a 5.8GHz digital video signal and 720p 60fps image transmission. It has a 4km transmission range.
+
+\paragraph{Video Receiver + Monitor}\mbox{€129} \\
+The Flysight Black Pearl RC801 FPV Monitor is chosen for its decent resolution, built-in battery, right frequency and a low price. \cite{fpvmonitor}
+
+\paragraph{Remote Controller}\mbox{€94} \\
+The RadioMaster TX12 16ch Transmitter is chosen because of it's compatibility with the FrSky X8R radio receiver. \cite{remotecontroller}
+\newpage
+\subsubsection{DIY Drone BOM}
+Above is the total bill of materials given to build a waterproof DIY drone. On the bill one can find "consumables", this part of the bill is reserved for 3D printed casings, mounting brackets, and related material.
+\begin{table}
+\sffamily
+\begin{center}
+\begin{tabular}{ | m{4cm} | m{7cm}| m{1cm} | } 
+  \hline
+  Part & Product Name & Price \\ 
+  \hline
+  Frame & Tarot FY690S & €165 \\ 
+  6x Motors & SplashDrone 4 & €250 \\ 
+  ESC & Hobbywing's 30A-Pro 2-6S & €250 \\ 
+  Flight Controller & BeagleBone Blue & €75 \\ 
+  Radio Receiver & FrSky X8R & €35 \\
+  GPS & U-Blox M8N & €20 \\
+  Battery & JMT 4400mAh 11.1v LiPo & €37 \\
+  Camera + Transmitter & Caddx Nebula Nano V2 & €125 \\
+  Video Receiver + Monitor & Flysight Black Pearl RC801 FPV Monitor & €129 \\
+  Remote Controller & RadioMaster TX12 16ch Transmitter & €94 \\
+  Consumables & & €100 \\
+  \hline
+  &Total& €1280 \\
+  \hline
+\end{tabular}
+
+\end{center}
+\rmfamily\normalsize
+\caption{Bill of Materials for a DIY Drone} \label{BOM} 
+\end{table}

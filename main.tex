@@ -1,0 +1,72 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{markdown}
+\usepackage{mathtools}
+\usepackage{wrapfig}
+\usepackage{tabu}
+\usepackage{colortbl}
+\usepackage[hidelinks]{hyperref,xcolor}
+\usepackage[backend=biber]{biblatex}
+\usepackage{adjustbox}
+\usepackage{nomencl}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+\addbibresource{projectplan.bib}
+\addbibresource{prr.bib}
+
+\title{Preliminary Research Report\\Remote Water Sensing using UAVs}
+\author{Robin \textsc{Westerik}}
+\newcommand{\supervisors}{Jan \textsc{Bollen}\\Harry \textsc{Futselaar}}
+
+\newcommand{\timePeriod}{February 2022 - June 2022}
+\newcommand{\sprint}{Analyze}
+\newcommand{\homepage}{\url{https://github.com/organizations/remotewatersensing/}}
+\date{\today}
+
+\makeatletter{}
+
+\makenomenclature
+\renewcommand{\nomname}{}
+
+\begin{document}
+
+\input{./title.tex}
+\input{./nomenclature.tex}
+
+\tableofcontents
+\pagebreak
+
+\section{Abbreviations}
+\sffamily\footnotesize
+\printnomenclature
+\rmfamily\normalsize
+
+\section{Introduction}
+
+In this report, existing water sensoring solutions, quality standards, the Mekong Delta and suitable drones will be analyzed. Literature will be reviewed, and findings of which will be contained in a related studies section as well as referenced throughout the document. This document can be extended during other sprints, when new info related to the project is found. A change log as well as the git version control system \cite{git} will keep track whenever this document is edited. 
+
+\input{mekong/00_main}
+\input{similarprojects/00_main}
+\input{water/00_main}
+\input{uav/00_main}
+
+\appendix
+\input{appendix/a_ionbalance}
+\input{appendix/b_nir}
+
+\pagebreak
+\printbibliography 
+
+\end{document}
+
+%4. Hebben ze bij TDTU een lab waarbij ik water samples kan testen? Zijn er test strips die ik eventueel on-site kan meenemen? Civil engineering environmental technology ondersteuning is toegezegd Tuen
+
+%Ik ga nu aan de slag aan het design. Eerst de elektronica, dan de addons
+
+% Design report frisse blik op microcontrollers, adaptibility adapters
+
+
+
+
+% Multispectraal camera even in de gaten houden, hoeveelheid vegetatie constant blijft, quantiteit en kwaliteit photosynthese in water

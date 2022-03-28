@@ -1,0 +1,67 @@
+%In the drone
+\newpage
+\subsection{Turbidity}
+Turbidity in water is caused by suspended and colloidal matter such as clay, silt, finely divided organic and inorganic matter, plankton and other microscopic organisms. Turbidity is an expression of the optical property that causes light to be scattered and absorbed rather than transmitted with no change in direction or flux level through the sample. \cite{standardmethods}\\
+
+The unit measuring turbidity is known as NTU or JTU (Jackson Turbidity Unit):
+
+\[1JTU = 1NTU = 1 mg/L\]
+
+
+Clarity of water is important in producing products destined for human consumption and in many manufacturing operations. \cite{standardmethods} Water treatment plants drawing from a surface water source commonly rely on fluid-particle separation processes such as sedimentation and filtration to increase clarity and ensure an acceptable product.\\
+
+
+\subsubsection{For aquatic life}
+
+The clarity of a natural body of water is an important determinant of its productivity. Light penetration is especially important for submerged aquatic plants. These plants depend on light interception and absorption for photosynthesis. Enough light must be absorbed by the plant for photosynthesis to result in a net increase in biomass in order for the plant to grow and reproduce. 
+
+Too much reductions in light levels result in death of the plant. As a result, plant growth in waters containing much turbidity and color is typically restricted to shallow depths, whereas plant growth is less restricted in less-turbid water. Submerged aquatic vegetation is a very important component of aquatic ecosystems. It provides food, shelter, and protection for many different aquatic species. Declines in this habitat will indirectly affect populations of species that depend on it. \cite{standardmethods}
+
+\subsubsection{Using a multispectral camera}
+As seen in \ref{similarprojects/multispectral} it is possible to get turbidity estimates by using a multispectral camera. This has the benefit of being able to cover a great amount of data in a short amount of time. It does require a lot of additional post processing to get realistic turbidity maps.
+
+\subsubsection{Using a secchi disk}
+A Secchi disk is a 30 cm disk with alternating black and white quadrants. It is lowered into the water until it can no longer be seen by the observer. This depth of disappearance, called the Secchi depth, is a measure of the transparency of the water. On an UAV, one could possibly use a RGB camera, a hoist, and machine vision to determine when the secchi depth is reached. \cite{secchidisk}
+
+\newpage
+\subsubsection{Sensors}
+In this section, a comparison between potential turbidity sensors for the project is given. Certain features like price, accuracy, and form factor will be given.
+
+As turbidity levels can change given depth, one should look into lowering these sensors at different depths.
+
+\paragraph{DFRobot SEN0189}\mbox{€9.01} \cite{SEN0189}
+\begin{table}[h!]
+	\centering
+	\adjustimage{height=4cm,valign=c}{water/71_sen0189.jpg}\quad
+	\begin{tabular}{| l | l |}
+    \hline
+    Protocol & Analog\\
+    Operating Temperature & 5-90 ℃ \\
+    Operating Range &  0-3000NTU\\
+    Response time & Within 500ms \\
+    Supply Voltage & 0V-4.5V \\
+    Software library included & yes \\
+    Availability & 3-5 Days \\
+    \hline
+	\end{tabular}
+\end{table}
+
+\paragraph{Keyeyestudio KS0414}\mbox{€12.72} \cite{KS0414}
+\begin{table}[h!]
+	\centering
+	\adjustimage{height=4cm,valign=c}{water/72_ks0414.png}\quad
+	\begin{tabular}{| l | l |}
+    \hline
+    Protocol & Analog\\
+    Operating Voltage & 5V\\
+    Opearting Temperature & -30℃-80℃\\
+    Operating Range & 0-4550NTU\\
+    Measurement Accuracy & 228NTU\\
+    Response time & Within 500ms \\
+    Supply Voltage & 0V-4.5V \\
+    Software library included & no \\
+    Availability & 2 Weeks \\
+    \hline
+	\end{tabular}
+\end{table}
+

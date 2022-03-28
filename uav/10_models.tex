@@ -1,0 +1,70 @@
+\subsection{Existing Models}
+Necessary requirements are elaborated and graded on every drone. As this comparison is purely about the performance of the drone for the project, no attention is given to price until after this comparison. Options for acquiring the drone will be briefly discussed.
+
+\subsubsection{Grading} \label{grading}
+Drones are graded by a product of their requirements. They start out with a score of 1. Each of these requirements are graded by rational number from 0-1.5. This way, a requirement score of 1.2 can positively affect the end grade, while a requirement score of 0 dismisses the drone all together. 
+
+This makes it possible to easily disregard a drone when it does not meet a requirement at all. Care must be put in dismissing drones though, since there sometimes exist alternatives that can fix these requirements. Generally, any drone above a score of 1 can be suitable for the project. 
+
+\subsubsection{Overview of the requirements}
+In this section, an overview of the requirements are given, including minimal values for these requirements. Further explanation might be given about different solutions that might exist to reach these requirements. 
+
+\paragraph{Payload capacity}\mbox{} \\
+The payload capacity is the maximum amount of weight a drone can safely carry while flying. While exceeding the payload capacity by a bit is often possible, it is never encouraged by the manufacturer. A large payload can shift the center of mass too much for the drone's stabilization to work reliably. There are also physical limits to the combined lifting force of the rotors. Summing up the weight of potential sensors of the drone, it is expected that the minimum payload capacity on paper should be 500g.
+
+\paragraph{Mounting clearance}\mbox{} \\
+There are several ways to mount sensors on a drone. Some drones have dedicated mounting holes while others rely on the user to come up with their own solution. There must be enough clearance on the bottom of the drone for the sensors to mount on. The amount of clearance could sometimes be extended by modifying the drone.
+
+\paragraph{Navigation/Routing}\mbox{} \\
+The drone must be able to navigate on its own to multiple previously marked GPS locations and return to home. Some drones have this functionality built into their own app, others don't even have an app. When this functionality isn't built in, it could be developed or the drone could be integrated into an open source software suite like ArduPilot \cite{ardupilot} if a SDK is available. This would delay the development cycle.
+\newpage
+\paragraph{Flight time}\mbox{} \\
+The drone ideally should be able to take multiple measurements per flight. Care should be taken when looking at flight times at data sheets, as these often don't include flight time whenever the drone has payload. The longer the flight time the better, a minimum of 10 minutes flight time should be fine.
+
+\paragraph{Range}\mbox{} \\
+Often there are two different ranges included in datasheets, the image transmission range and the drone operating radio range. In this project, real time transmission of images has a low priority, so the focus is laid on operating radio range. Again, care should be taken whenever looking at range as data sheets usually report this range without obstructions. Thankfully, as there are little obstructions in the Mekong Delta, the realistic range would be very similar. A minimum of 1 kilometer operating range is required.
+
+\paragraph{Waterproof}\mbox{} \\
+It is important to reduce the risk of damaging the drone as much as possible. As the measurements takes place near and on water, using a waterproof drone is vital. Generally, drones denote the level of solid and liquid protection by the Ingress Protection standard. The IP standard classifies the degree of protection provided by an enclosure. \cite{ipstandard} For this project, a minimum rating of IP64 would be sufficient, meaning dust-tight and resistant against splashes of water.
+
+For drones that are not waterproof, certain wet suits are available to alleviate this issue. \cite{phantomrain}
+
+\paragraph{Landing in water}\mbox{} \\
+For some measurements and emergency landings it is best that the drone is able to land in the water. While there are not a lot of drones available that have this feature out of the box, there is some commercial water landing gear available.\cite{buylanding} Designing your own landing gear is also possible. \cite{diylanding} Water landing gear often also increase the amount of clearance available for sensors.
+
+\paragraph{Maneuverability}\mbox{} \\
+The drone should not get stuck on it's flight in the Mekong River. It should be fast enough to take the measurements, and it should be stable enough to be used in an autonomous environment. These aspects are what determines the maneuverability of the drone.
+
+\input{uav/models/00_splashdrone4}
+\input{uav/models/10_fishermanfd1}
+\input{uav/models/20_spry}
+\input{uav/models/30_powereggx}
+\input{uav/models/40_phantom4}
+\input{uav/models/50_air2s}
+
+\subsection{Summary of models}
+
+Every drone above is graded by a product of their requirements as seen in \ref{grading}. New and used prices are not included in the score but shown on the bottom of the table. These prices were found as of writing this document (07-03-2022). New prices are resourced from the respective manufacturer's website, while used prices are averaged from eBay \cite{ebay}.
+
+\sffamily\footnotesize
+\tabulinesep=6pt
+\begin{tabu}{|r|X[cm]|X[cm]|X[cm]|X[cm]|X[cm]|X[cm]|}
+\hline
+& SplashDrone 4 & Fisherman FD1 & Spry+ & PowerEgg X & Phantom 4 & Air 2S\\
+\hline
+Payload Capacity   & 1.5 & 1.5 & 0 & 0 & 1.0 & 0\\
+Mounting Clearance & 1.3 & 1.1 & 0.8 & 1.0 & 1.5 & 1.0\\
+Navigation/Routing & 1.5 & 0.5 & 1.4 & 0 & 1.5 & 1.5\\
+Flight time        & 1.5 & 1.5 & 1.5 & 1.5 & 1.3 & 1.5\\
+Range              & 1.5 & 1.2 & 0   & 1.5 & 1.5 & 1.5\\
+Waterproof         & 1.5 & 1.5 & 1.5 & 1.0 & 1.0 & 1.0\\
+Landing in water   & 1.5 & 1.5 & 1.5 & 1.3 & 0.8 & 0.5\\
+Maneuverability    & 1.4 & 1.1 & 1.5 & 1.5 & 1.4 & 0.8\\
+\hline
+Total Score        & 20.7 & 3.7 & 0 & 0 & 4.9 & 0 \\
+New Price in EUR   & €2284 & €977 & €903 & €1150 & - & €1300\\
+± Used Price in EUR  & €2000 & - & - & €850 & 500 & € 850\\
+\hline
+\end{tabu}
+\rmfamily\normalsize
+
